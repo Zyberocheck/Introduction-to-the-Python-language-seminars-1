@@ -52,5 +52,17 @@
 
 
 
+# n = int(input('Введите число: '))
 
+# count = 0
+# b = 0
+# a = 0
+# k = 1
+# while 2**k<=n:
+#     a = 2**k
+#     k+=1
+#     b+=1
+#     count+= 1
+#     print(f'2 в степени {b} = {a}')
+# print(count)
 
