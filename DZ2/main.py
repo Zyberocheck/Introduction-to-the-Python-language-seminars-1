@@ -29,22 +29,22 @@
 # Помогите Кате отгадать задуманные Петей числа.
 
 
-x = int(input('Введите первое число: '))
-y = int(input('Введите второе число: '))
+# x = int(input('Введите первое число: '))
+# y = int(input('Введите второе число: '))
 
-if x>0 and x<= 1000 and y>0 and y<= 1000:
-    count = 0
-    for i in range(x):
-        if count !=1:
-            for j in range(y):
-                if count !=1:
-                    if i + j == x  and i*j == y:
-                        print(i,j)
-                        count = 1
-                    # elif i + j != x  and i*j != y:
-                    #     print('Введены не корректные числа') --- выводит много раз как сделать чтобы не выводил?
-else:
-    print('Число введено не корректно ')
+# if x>0 and x<= 1000 and y>0 and y<= 1000:
+#     count = 0
+#     for i in range(x):
+#         if count !=1:
+#             for j in range(y):
+#                 if count !=1:
+#                     if i + j == x  and i*j == y:
+#                         print(i,j)
+#                         count = 1
+#                     # elif i + j != x  and i*j != y:
+#                     #     print('Введены не корректные числа') --- выводит много раз как сделать чтобы не выводил?
+# else:
+#     print('Число введено не корректно ')
 
 
 
