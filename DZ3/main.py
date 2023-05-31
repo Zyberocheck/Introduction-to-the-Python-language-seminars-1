@@ -11,19 +11,19 @@
 # 3
 # -> 1
 
-import random
+# import random
 
-a = int(input("Введите количество элементов в массиве: "))
-b = int(input("Введите искомое: "))
+# a = int(input("Введите количество элементов в массиве: "))
+# b = int(input("Введите искомое: "))
 
-arrow = [1]*a
-count = 0
-for i in range(a):
-    arrow[i]=random.randint(0,(b+1)*2)
-    if arrow[i] == b:
-        count+=1
-print(arrow)
-print('Число встречается : ',count,' раз')
+# arrow = [1]*a
+# count = 0
+# for i in range(a):
+#     arrow[i]=random.randint(0,(b+1)*2)
+#     if arrow[i] == b:
+#         count+=1
+# print(arrow)
+# print('Искомое число встречается : ',count,' раз')
 
 
 
@@ -41,12 +41,113 @@ print('Число встречается : ',count,' раз')
 # 6
 # -> 5
 
+
+
+### c = input("Введите через пробел элементы списка: ").split()
+### arrow =  list(map(int, c))
+
 # import random
 
+# a = abs(int(input("Введите количество элементов в массиве: ")))
+# d = abs(int(input('Введите максимальное число в массиве: ')))
 
-# a = int(input("Введите количество элементов в массиве: "))
+# arrow = [1]*a
+
+# for i in range(a):
+#     arrow[i]=random.randint(0,d)
+# print(arrow)
+
+# if len(arrow) != a or a == 0:
+#     print('Введенные элементы не соответствуют заявленному количеству!')
+# else:
+#     b = int(input("Введите элемент: "))
+#     min = abs(b - arrow[0])
+#     print(f'это минимум min = {min} и arrow[0] = {arrow[0]}')
+#     sn = 0
+#     for i in range(1,a):
+#          count = abs(b - arrow[i])
+#          print(f'это count = {count} это b = {b} и arrow[i] = {arrow[i]} ')
+#          if count < min:
+#               min=count
+#               print(f'это новый min = {min}')
+#               sn = i
+#               print(f'это новый sn = {sn}')
+#     print(f'Наиболее близкое число к задонному числу {b} число: {arrow[sn]}')
 
 
 
+
+# *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
+# В случае с английским алфавитом очки распределяются так:
+
+# A, E, I, O, U, L, N, S, T, R – 1 очко; 1
+# D, G – 2 очка; 2
+# B, C, M, P – 3 очка; 3
+# F, H, V, W, Y – 4 очка; 4
+# K – 5 очков; 5
+# J, X – 8 очков; 6
+# Q, Z – 10 очков. 7
+
+# А русские буквы оцениваются так: 
+# А, В, Е, И, Н, О, Р, С, Т – 1 очко; 1
+# Д, К, Л, М, П, У – 2 очка; 2
+# Б, Г, Ё, Ь, Я – 3 очка; 3
+# Й, Ы – 4 очка; 4
+# Ж, З, Х, Ц, Ч – 5 очков; 5
+# Ш, Э, Ю – 8 очков; 6
+# Ф, Щ, Ъ – 10 очков. 7
+
+# Напишите программу, которая вычисляет стоимость введенного пользователем слова. 
+# Будем считать, что на вход подается только одно слово, которое содержит либо только английские, 
+# либо только русские буквы.
+
+# *Пример:*
+
+# ноутбук
+#     12
+
+
+rusword = {'А, В, Е, И, Н, О, Р, С, Т ' : 1, 
+             'Д, К, Л, М, П, У':2,
+             'Б, Г, Ё, Ь, Я':3,
+             'Й, Ы':4,
+             'Ж, З, Х, Ц, Ч':5,
+             'Ш, Э, Ю':6,
+             'Ф, Щ, Ъ':7}
+
+enwords = {'A, E, I, O, U, L, N, S, T, R ':1,
+           'D, G':2,
+           'B, C, M, P':3,
+           'F, H, V, W, Y':4,
+           'K':5,
+           'J, X':6,
+           'Q, Z':7}
+
+
+# print(rusword)
+# print(enwords)
+# print('{} : {}'.format(i,rusword[i]))
+
+# a = input('Введите слово на русском или на английском: ').upper()
+
+
+# pointru = 0
+# for i in a:
+#      for key,value in rusword.items():
+#           if i in key:
+#                pointru+= value
+# if pointru>0:
+#      print(f'За слово {a} начисленно {pointru} очков')
+
+# pointen = 0
+# for i in a:
+#      for key,value in enwords.items():
+#           if i in key:
+#                pointen+= value
+# if pointen>0:
+#      print(f'За слово {a} начисленно {pointen} очков')    
+     
+    
+    
 
 
