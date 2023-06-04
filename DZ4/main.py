@@ -1,4 +1,4 @@
-
+import random
 
 
 # Задача 22: Даны два неупорядоченных набора целых чисел (может быть, с повторениями). 
@@ -63,60 +63,58 @@
 # 4 -> 1 2 3 4
 # 9
 
-# import random
+kollcyst = abs(int(input("Введите количество кустов на грядке не мене 3 кустов: ")))
+print()
+if kollcyst < 3:
+    print('Вы ввели меньшее количество кустов!')
+else:
+    kyst = [1]*kollcyst
+    ygodi = random.randint(1,100)
+    for i in range(kollcyst):
+        kyst[i]=random.randint(0,ygodi)
+    print(kyst)
 
-# kollcyst = abs(int(input("Введите количество кустов на грядке не мене 3 кустов: ")))
-# print()
-# if kollcyst < 3:
-#     print('Вы ввели меньшее количество кустов!')
-# else:
-#     kyst = [1]*kollcyst
-#     ygodi = random.randint(1,100)
-#     for i in range(kollcyst):
-#         kyst[i]=random.randint(0,ygodi)
-#     print(kyst)
+    max = kyst[0] + kyst[len(kyst) - 1] + kyst[1]
+    print(f'Это max = {max}')
 
-#     max = kyst[0] + kyst[len(kyst) - 1] + kyst[1]
-#     print(f'Это max = {max}')
+    if kollcyst == 3:
+        print(f'Вы ввели 3 куста. Комуто достанется {max} ягод')
 
-#     if kollcyst == 3:
-#         print(f'Вы ввели 3 куста. Комуто достанется {max} ягод')
+    last = kyst[len(kyst) - 1] + kyst[0] + kyst[len(kyst) - 2]
+    print(f'Это last = {last}')
+    print()
 
-#     last = kyst[len(kyst) - 1] + kyst[0] + kyst[len(kyst) - 2]
-#     print(f'Это last = {last}')
-#     print()
-
-#     sum = 0
-#     count = 0
-#     i = 1
-#     for i in range(1,kollcyst-1):
-#         sumy = (kyst[i]+kyst[i+1]+kyst[i-1])
-#         print(f'Это sum = {sumy}')
-#         if sumy > sum:
-#             sum = sumy
-#             county = i
-#             count = county
-#         print()
-#     print(f'Это конечный sum = {sum}')
+    sum = 0
+    count = 0
+    i = 1
+    for i in range(1,kollcyst-1):
+        sumy = (kyst[i]+kyst[i+1]+kyst[i-1])
+        print(f'Это sum = {sumy}')
+        if sumy > sum:
+            sum = sumy
+            county = i
+            count = county
+        print()
+    print(f'Это конечный sum = {sum}')
     
-#     print(f'Это конечный count = {count}')
+    print(f'Это конечный count = {count}')
 
-#     if sum > max and sum > last:
-#         print()
-#         print(f'Максимальное количество ягод на - {count}, {count + 1}, {count + 2} кустах, а количество ягод составляет {sum} ягод.')    
+    if sum > max and sum > last:
+        print()
+        print(f'Максимальное количество ягод на - {count}, {count + 1}, {count + 2} кустах, а количество ягод составляет {sum} ягод.')    
         
-#     if last > max and last > sum:
-#         count = kollcyst
-#         print()
-#         print(f'2 Максимальное количество ягод на - {count - 1}, {count}, {count - (len(kyst) - 1)} кустах, а количество ягод составляет {last} ягод')
+    if last > max and last > sum:
+        count = kollcyst
+        print()
+        print(f'2 Максимальное количество ягод на - {count - 1}, {count}, {count - (len(kyst) - 1)} кустах, а количество ягод составляет {last} ягод')
+ 
+    if max > sum and max > last:
+        count = count - (len(kyst) - 1)
+        print()
+        print(f'3 Максимальное количество ягод на - {count - (len(kyst) - 2)}, {count}, {count - (len(kyst) - 1)} кустах, а количество ягод составляет {max} ягод')
 
-#     if max > sum and max > last:
-#         count = count - (len(kyst) - 1)
-#         print()
-#         print(f'3 Максимальное количество ягод на - {count - (len(kyst) - 2)}, {count}, {count - (len(kyst) - 1)} кустах, а количество ягод составляет {max} ягод')
-
-#     if max == sum == last:
-#         print(f'На первом и соседних, на последнем и соседних, а также на {county} кусте и соседних от него одинаковое количество ягод а именно - {max}')
+    if max == sum == last:
+        print(f'На первом и соседних, на последнем и соседних, а также на {county} кусте и соседних от него одинаковое количество ягод а именно - {max}')
 
 
         
