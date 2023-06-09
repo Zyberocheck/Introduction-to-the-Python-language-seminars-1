@@ -43,8 +43,10 @@ arry= [1]*a
 resRand = [random.randint(-b,c) for i in arry]
 print(resRand)
 
+
+arrya = list()
+
 for i in range(len(resRand)):
-    arrya = list()
     if resRand[i]>0:
         arrya.append(i)
 print(arrya)
