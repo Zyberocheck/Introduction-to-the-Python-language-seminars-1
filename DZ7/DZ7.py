@@ -14,33 +14,34 @@
 # 'аоуыэеёиюя'
 
 
+ritm = 'пара-ра-рам рам-пам-папам па-ра-па-да'
 
 
-# ritm = 'пара-ра-рам рам-пам-папам па-ра-па-да'
+def search_vowel(a):
+    str= a.lower().split()
+    print(str)
+    slog = []
+    for word in str:
+        sum = 0
+        for i in word:
+            if i in 'аоуыэеёиюя':
+                sum+=1
+        slog.append(sum)
+        print(slog)
+    return slog
 
-# def search_vowel(a):
-#     str= a.lower().split()
-#     slog = []
-#     for word in str:
-#         sum = 0
-#         for i in word:
-#             if i in 'аоуыэеёиюя':
-#                 sum+=1
-#         slog.append(sum)
-#     return slog
+number_of_syllables = search_vowel(ritm)
 
-# number_of_syllables = search_vowel(ritm)
+def search_true_false(funfunction,word_songs):
+    for item in word_songs:
+        if not funfunction(item):
+            return False
+    return True
 
-# def search_true_false(funfunction,word_songs):
-#     for item in word_songs:
-#         if not funfunction(item):
-#             return False
-#     return True
-
-# if search_true_false(lambda x: x % 2 == 0 , number_of_syllables):
-#      print('Парам пам-пам')
-# else:
-#     print('Пам парам')
+if search_true_false(lambda x: x % 2 == 0 , number_of_syllables):
+     print('Парам пам-пам')
+else:
+    print('Пам парам')
 
 
 
